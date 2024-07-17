@@ -1,10 +1,13 @@
-import React from 'react';
-import { Card } from './Card';
+import { useState } from "react";
+import { Card } from "./Card";
+import { CardHours } from "./CardHours";
 
-import s from './Days.module.scss';
-import { Tabs } from './Tabs';
+import s from "./Days.module.scss";
+import { Tabs } from "./Tabs";
 
 interface Props {}
+
+type FIXME = any;
 
 export interface Day {
   day: string;
@@ -15,72 +18,33 @@ export interface Day {
   info: string;
 }
 
-export const Days = (props: Props) => {
-  const days: Day[] = [
-    {
-      day: 'Сегодня',
-      day_info: '28 авг',
-      icon_id: 'sun',
-      temp_day: '+18',
-      temp_night: '+15',
-      info: 'Облачно',
-    },
-    {
-      day: 'Завтра',
-      day_info: '29 авг',
-      icon_id: 'small_rain_sun',
-      temp_day: '+18',
-      temp_night: '+15',
-      info: 'небольшой дождь и солнце',
-    },
-    {
-      day: 'Ср',
-      day_info: '30 авг',
-      icon_id: 'small_rain',
-      temp_day: '+18',
-      temp_night: '+15',
-      info: 'небольшой дождь',
-    },
-    {
-      day: 'Чт',
-      day_info: '28 авг',
-      icon_id: 'mainly_cloudy',
-      temp_day: '+18',
-      temp_night: '+15',
-      info: 'Облачно',
-    },
-    {
-      day: 'Пт',
-      day_info: '28 авг',
-      icon_id: 'rain',
-      temp_day: '+18',
-      temp_night: '+15',
-      info: 'Облачно',
-    },
-    {
-      day: 'Сб',
-      day_info: '28 авг',
-      icon_id: 'sun',
-      temp_day: '+18',
-      temp_night: '+15',
-      info: 'Облачно',
-    },
-    {
-      day: 'Вс',
-      day_info: '28 авг',
-      icon_id: 'sun',
-      temp_day: '+18',
-      temp_night: '+15',
-      info: 'Облачно',
-    },
-  ];
+export const Days = ({ weather }: FIXME) => {
+  const changeTab = (id: number): void => {
+    setCurrentTabId(id);
+  };
+
+  const [currentTabId, setCurrentTabId] = useState<number>(0);
+
+  const weekWeather = [];
+
+  for (let i: number = 0; i < weather.length; i++) {
+    if (i % 6 === 0) weekWeather.push(weather[i]);
+  }
   return (
     <>
-      <Tabs />
+      <Tabs changeTab={changeTab} />
       <div className={s.days}>
-        {days.map((day: Day) => (
-          <Card day={day} key={day.day} />
-        ))}
+        {currentTabId === 0
+          ? weather
+              .slice(0, 7)
+              .map((el: FIXME, index: number) => (
+                <CardHours key={index} hour={el} />
+              ))
+          : weekWeather
+              .slice(0, 7)
+              .map((el: FIXME, index: number) => <Card day={el} key={index} />)}
+
+        {}
       </div>
     </>
   );

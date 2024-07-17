@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface Props {
   id: string;
@@ -6,7 +6,7 @@ interface Props {
 
 export const GlobalSvgSelector = ({ id }: Props) => {
   switch (id) {
-    case 'header-logo':
+    case "header-logo":
       return (
         <svg
           width="65"
@@ -49,7 +49,7 @@ export const GlobalSvgSelector = ({ id }: Props) => {
           />
         </svg>
       );
-    case 'change-theme':
+    case "change-theme":
       return (
         <svg
           width="35"
@@ -64,7 +64,7 @@ export const GlobalSvgSelector = ({ id }: Props) => {
           />
         </svg>
       );
-    case 'rain':
+    case "Rain":
       return (
         <svg
           width="48"
@@ -111,7 +111,7 @@ export const GlobalSvgSelector = ({ id }: Props) => {
           </defs>
         </svg>
       );
-    case 'small_rain':
+    case "Light Rain":
       return (
         <svg
           width="48"
@@ -158,7 +158,7 @@ export const GlobalSvgSelector = ({ id }: Props) => {
           </defs>
         </svg>
       );
-    case 'small_rain_sun':
+    case "small_rain_sun":
       return (
         <svg
           width="48"
@@ -224,7 +224,7 @@ export const GlobalSvgSelector = ({ id }: Props) => {
           </defs>
         </svg>
       );
-    case 'sun':
+    case "Clear":
       return (
         <svg
           width="48"
@@ -256,7 +256,7 @@ export const GlobalSvgSelector = ({ id }: Props) => {
           </defs>
         </svg>
       );
-    case 'mainly_cloudy':
+    case "Clouds":
       return (
         <svg
           width="48"
@@ -304,7 +304,7 @@ export const GlobalSvgSelector = ({ id }: Props) => {
           </defs>
         </svg>
       );
-    case 'close':
+    case "close":
       return (
         <svg
           width="18"
