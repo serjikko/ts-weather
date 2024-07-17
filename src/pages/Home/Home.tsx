@@ -1,29 +1,43 @@
-import React, { useEffect } from 'react';
-import { useCustomDispatch, useCustomSelector } from '../../hooks/store';
-import { selectCurrentWeatherData } from '../../store/selectors';
-import { fetchCurrentWeather } from '../../store/thunks/fetchCurrentWeather';
-import { Days } from './components/Days/Days';
-import { ThisDay } from './components/ThisDay/ThisDay';
-import { ThisDayInfo } from './components/ThisDayInfo/ThisDayInfo';
+import React, { useEffect } from "react";
+import { useCustomDispatch, useCustomSelector } from "../../hooks/store";
+import selectors from "../../store/selectors";
+import { fetchCurrentWeather } from "../../store/thunks/fetchCurrentWeather";
+import { Days } from "./components/Days/Days";
+import { ThisDay } from "./components/ThisDay/ThisDay";
+import { ThisDayInfo } from "./components/ThisDayInfo/ThisDayInfo";
+import { useParams } from "react-router-dom";
 
-import s from './Home.module.scss';
+import s from "./Home.module.scss";
+import { fetchWeekWeather } from "../../store/thunks/fetchWeekWeather";
 
 interface Props {}
+type urlParams = {
+  city: "string";
+};
 
 export const Home = (props: Props) => {
+  const params = useParams<urlParams>();
+
   const dispatch = useCustomDispatch();
-  const { weather } = useCustomSelector(selectCurrentWeatherData);
+  const { weather } = useCustomSelector(selectors.selectCurrentWeatherData);
+  const { list: weekWeather } = useCustomSelector(
+    selectors.selectWeekWeatherData
+  );
 
   useEffect(() => {
-    dispatch(fetchCurrentWeather('paris'));
-  }, []);
+    if (params.city) {
+      dispatch(fetchCurrentWeather(params.city));
+      dispatch(fetchWeekWeather(params.city));
+    }
+  }, [params.city]);
+
   return (
     <div className={s.home}>
       <div className={s.wrapper}>
         <ThisDay weather={weather} />
-        <ThisDayInfo />
+        <ThisDayInfo weather={weather} />
       </div>
-      <Days />
+      <Days weather={weekWeather} />
     </div>
   );
 };
