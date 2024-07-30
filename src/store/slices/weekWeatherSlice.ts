@@ -1,8 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AxiosResponse } from 'axios';
-// import { Weather } from '../types/weather';
 import { WeatherListElement } from '../types/weatherListElement';
-
+import { weekWeatherElement } from '../types/weekWeatherElement';
 
 type Weather = {
   list: WeatherListElement[];
@@ -538,7 +537,7 @@ export const weekWeatherSlice = createSlice({
     },
     fetchWeekWeatherSuccess(
       state,
-      action: PayloadAction<AxiosResponse<Weather>>
+      action: PayloadAction<AxiosResponse<{list: weekWeatherElement[]}>>
     ) {
       state.isLoading = false;
       state.list = action.payload.data.list;
@@ -549,7 +548,7 @@ export const weekWeatherSlice = createSlice({
     },
     fetchWeekWeatherError(
       state,
-      action: PayloadAction<AxiosResponse<Weather>>
+      action: PayloadAction<AxiosResponse<{list: weekWeatherElement[]}>>
     ) {
       state.isLoading = false;
       state.response = {

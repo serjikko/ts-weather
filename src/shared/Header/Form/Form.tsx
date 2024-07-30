@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import s from "./style.module.scss";
 import { Link } from "react-router-dom";
 import { storage } from "../../../model/Storage";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
+  const navigate = useNavigate();
   const [cityName, setCityName] = useState("");
-  const [searchHistory, setSearchHistory] = useState<String[]>(
+  const [searchHistory, setSearchHistory] = useState<string[]>(
     storage.getItem("history") || ["Paris", "London", "Moscow"]
   );
   const [historyVisible, setHistoryVisible] = useState<boolean>(false);
@@ -18,10 +20,23 @@ const Form = () => {
     }
   };
 
-  const addHistoryElement = () => {
-    storage.setItem("history", [cityName, ...searchHistory.slice(0, 3)]);
+  const addHistoryElement = (city?: string) => {
+    if (city) {
+      storage.setItem("history", [
+        city,
+        ...searchHistory.filter((el) => el !== city).slice(0, 3),
+      ]);
 
-    setSearchHistory([cityName, ...searchHistory.slice(0, 3)]);
+      setSearchHistory([
+        city,
+        ...searchHistory.filter((el) => el !== city).slice(0, 3),
+      ]);
+
+      navigate(`/${city}`);
+    } else {
+      storage.setItem("history", [cityName, ...searchHistory.slice(0, 3)]);
+      setSearchHistory([cityName, ...searchHistory.slice(0, 3)]);
+    }
   };
 
   return (
@@ -44,9 +59,13 @@ const Form = () => {
         {historyVisible === true ? (
           <div className={s.history} onClick={(e) => setHistoryVisible(false)}>
             {searchHistory.map((el, index) => (
-              <Link className={s.historyElement} key={index} to={`/${el}`}>
+              <div
+                className={s.historyElement}
+                onClick={() => addHistoryElement(el)}
+                key={index}
+              >
                 {el}
-              </Link>
+              </div>
             ))}
           </div>
         ) : (
