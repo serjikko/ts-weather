@@ -29,7 +29,7 @@ export const Home = (props: Props) => {
       dispatch(fetchCurrentWeather(params.city));
       dispatch(fetchWeekWeather(params.city));
     }
-  }, [params.city]);
+  }, [dispatch, params.city]);
 
   return (
     <div className={s.home}>

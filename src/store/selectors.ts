@@ -6,10 +6,14 @@ const selectCurrentWeatherData = (state: RootState) =>
 const selectWeekWeatherData = (state: RootState) =>
   state.weekWeatherSliceReducer;
 
+const selectRSSData = (state: RootState) =>
+  state.RSSSliceReducer;
+
 
 const selectors = {
   selectCurrentWeatherData,
-  selectWeekWeatherData
+  selectWeekWeatherData,
+  selectRSSData
 }
 
 

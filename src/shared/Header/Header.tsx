@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from "react";
-import Select from "react-select";
+import Select, { SingleValue } from "react-select";
 import { GlobalSvgSelector } from "../../assets/icons/global/GlobalSvgSelector";
 import { Theme } from "../../context/ThemeContext";
 import { useTheme } from "../../hooks/useTheme";
 import s from "./Header.module.scss";
 import Form from "./Form/Form";
+import { useNavigate } from "react-router-dom";
+import { storage } from "../../model/Storage";
 
 interface Props {}
+type SelectOption = { label: string; value: string };
 
 export const Header = (props: Props) => {
+  const navigate = useNavigate();
   const theme = useTheme();
-  const options = [
-    { value: "page-1", label: "Погода" },
-    { value: "page-2", label: "Новости" },
-    { value: "page-3", label: "О проекте" },
+  const options: SelectOption[] = [
+    { value: "Moscow", label: "Погода" },
+    { value: "News", label: "Новости" },
+    { value: "About", label: "О проекте" },
   ];
 
   const colourStyles = {
@@ -56,6 +60,11 @@ export const Header = (props: Props) => {
           defaultValue={options[0]}
           styles={colourStyles}
           options={options}
+          onChange={(e: SingleValue<{ value: string; label: string }>) => {
+            if (e) {
+              navigate(e.value);
+            }
+          }}
         />
       </div>
     </header>
