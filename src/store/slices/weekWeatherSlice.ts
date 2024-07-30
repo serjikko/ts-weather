@@ -101,7 +101,426 @@ const initialState: Weather = {
           }
         ],
       },
-      
+      {
+        dt_txt: '0000000000 00:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 03:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 06:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 09:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 12:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 15:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 18:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 00:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 03:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 06:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 09:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 12:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 15:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 18:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 00:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 03:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 06:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 09:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 12:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 15:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 18:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 00:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 03:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 06:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 09:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 12:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 15:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 18:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 00:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 03:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 06:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 09:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 12:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 15:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
+      {
+        dt_txt: '0000000000 18:00:00',
+        main: {
+          temp: 273.15,
+        },
+        weather: [
+          {
+            main: "Clear",
+            description: 'Clear'
+          }
+        ],
+      },
     ],
   isLoading: false,
   response: {

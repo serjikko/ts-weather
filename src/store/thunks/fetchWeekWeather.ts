@@ -16,3 +16,5 @@ export const fetchWeekWeather =
       console.log(error);
     }
   };
+
+
