@@ -1,4 +1,5 @@
 [![Deploy to GithubPages](https://github.com/serjikko/ts-weather/actions/workflows/sanity-check.yml/badge.svg)](https://github.com/serjikko/ts-weather/actions/workflows/sanity-check.yml)
+[![pages-build-deployment](https://github.com/serjikko/ts-weather/actions/workflows/pages/pages-build-deployment/badge.svg?branch=buil2)](https://github.com/serjikko/ts-weather/actions/workflows/pages/pages-build-deployment)
 
 
 # Информационное приложение с прогнозом погоды и новостями
