@@ -1,4 +1,4 @@
-[![PR Sanity Check, Build and Deploy](https://github.com/serjikko/ts-weather/actions/workflows/sanity-check.yml/badge.svg?branch=airtable)](https://github.com/serjikko/ts-weather/actions/workflows/sanity-check.yml)
+[![Deploy to GithubPages](https://github.com/serjikko/ts-weather/actions/workflows/sanity-check.yml/badge.svg)](https://github.com/serjikko/ts-weather/actions/workflows/sanity-check.yml)
 
 
 # Информационное приложение с прогнозом погоды и новостями
