@@ -1,22 +1,25 @@
-name: PR Sanity Check, Build and Deploy
+name: Deploy to GithubPages
 
 on: pull_request
-
+permissions:
+  contents: write
 jobs:
-  lint:
-    runs-on: ubuntu-20.04
+  deploy-to-gh-pages:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Install Packages
         run: |
-          npm install
+          npm ci
 
-      - name: Lint check
+      - name: Build prod
         run: |
-          npm run lint
+          npm run build
+          cp dist/index.html dist/404.html
 
-      - name: Run tests
-        run: |
-          npm run 
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # The folder the action should deploy.
