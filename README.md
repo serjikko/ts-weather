@@ -1,8 +1,8 @@
 [![pages-build-deployment](https://github.com/serjikko/ts-weather/actions/workflows/pages/pages-build-deployment/badge.svg?branch=buil2)](https://github.com/serjikko/ts-weather/actions/workflows/pages/pages-build-deployment)
 
 
-# Информационное приложение с прогнозом погоды и новостями
-
+# Информационное приложение с прогнозом погоды и новостями 
+Ссылка на демо: https://serjikko.github.io/ts-weather/
 Используется API: newsdata.io, openweathermap.org. Требуется получить API_KEY для указанных сервисов.
 Приложение показывает прогноз погоды на день, неделю. На странице "Новости" отображаются новости из категории "Погода, климат"
 
